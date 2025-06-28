@@ -1,0 +1,50 @@
+[
+  {
+    "ContainingType": "Cashtrans.Controllers.CloseLockController",
+    "Method": "CloseLock",
+    "RelativePath": "api/CloseLock",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestDto",
+        "Type": "Cashtrans.DTOS.CloseLockRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cashtrans.Controllers.DispatchLockController",
+    "Method": "DispatchLock",
+    "RelativePath": "api/DispatchLock",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Cashtrans.DTOS.DispatchLockRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Cashtrans.Controllers.ReadLockDataController",
+    "Method": "ReadLockDataBySerial",
+    "RelativePath": "api/ReadLockData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serialNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

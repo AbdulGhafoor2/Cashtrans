@@ -1,0 +1,168 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Cashtrans",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/CloseLock": {
+      "post": {
+        "tags": [
+          "CloseLock"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CloseLockRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CloseLockRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CloseLockRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/DispatchLock": {
+      "post": {
+        "tags": [
+          "DispatchLock"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DispatchLockRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DispatchLockRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DispatchLockRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ReadLockData": {
+      "get": {
+        "tags": [
+          "ReadLockData"
+        ],
+        "parameters": [
+          {
+            "name": "serialNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CloseLockRequest": {
+        "type": "object",
+        "properties": {
+          "closeSealField": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispatcherIDField": {
+            "type": "string",
+            "nullable": true
+          },
+          "ifForcedClosedField": {
+            "type": "boolean"
+          },
+          "ifForcedClosedFieldSpecified": {
+            "type": "boolean"
+          },
+          "itemElementNameField": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemField": {
+            "type": "string",
+            "nullable": true
+          },
+          "lockModeField": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lockSequenceField": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DispatchLockRequest": {
+        "type": "object",
+        "properties": {
+          "dispatcherIDField": {
+            "type": "string",
+            "nullable": true
+          },
+          "ifSecondLineMaintenanceCallField": {
+            "type": "boolean"
+          },
+          "ifSecondLineMaintenanceCallFieldSpecified": {
+            "type": "boolean"
+          },
+          "itemElementNameField": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemField": {
+            "type": "string",
+            "nullable": true
+          },
+          "lockModeField": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "user1IDField": {
+            "type": "string",
+            "nullable": true
+          },
+          "user2IDField": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

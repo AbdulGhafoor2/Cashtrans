@@ -1,0 +1,6 @@
+@Cashtrans_HostAddress = http://localhost:5115
+
+GET {{Cashtrans_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
